@@ -1,7 +1,7 @@
 # IMMSegTrack
 A well-designed tracker aiming to perform better in datasets with features like irregular motions and complex postures for multiple object tracking (MOT) in computer vision. Further experiments are needed to examine the effectiveness of our proposed method.
 ## Introduction
-The proposed solution treat YOLOv8 and ByteTrack as baselines, with the model from YOLOv8 used for segmentation. The innovations in this solution are as follows: 
+The proposed solution treat ByteTrack as baseline, with the model from YOLOv8 used for segmentation. The innovations in this solution are as follows: 
 - Segmentation contours matching for object tracking: This approach improves the accuracy of matching before updating the motion models compared to the traditional IoU matching method.
 - Interactive Multiple Model (IMM) filtering for motion modeling: Instead of using traditional linear Kalman filtering, this solution adopts IMM filtering to model the objects' motions, resulting in tracking boxes that better fit the target's motion trajectory.
 - Improved matching strategy in ByteTrack: Low-confidence unmatched detection boxes are re-evaluated as the second one in ByteTrack by comparing them with unmatched trackers to enhance the matching process.
